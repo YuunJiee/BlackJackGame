@@ -1,0 +1,40 @@
+@keyframes move0{
+    from{opacity:0; left: 30%;}
+    to{opacity:1; left: 20%;}
+}
+@keyframes move1{
+    from{opacity:0; left: 36%;}
+    to{opacity:1; left: 26%;}
+}
+@keyframes move2{
+    from{opacity:0; left: 42%;}
+    to{opacity:1; left: 32%;}
+}
+@keyframes move3{
+    from{opacity:0; left: 48%;}
+    to{opacity:1; left: 38%;}
+}
+@keyframes move4{
+    from{opacity:0; left: 54%;}
+    to{opacity:1; left: 44%;}
+}
+@keyframes movebackcard{
+    from{opacity:0.92; left: 36%;}
+    to{opacity:1; left: 26%;}
+}
+@keyframes move5{
+    from{opacity:0; left: 30px;}
+    to{opacity:1; left: 15px;}
+}
+@keyframes move6{
+    from{opacity:0; left: 45px;}
+    to{opacity:1; left: 30px;}
+}
+@keyframes move7{
+    from{opacity:0; left: 60px;}
+    to{opacity:1; left: 45px;}
+}
+@keyframes resultam{
+    from{opacity:0;}
+    to{opacity:1;}
+}

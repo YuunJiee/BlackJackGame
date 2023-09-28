@@ -1,0 +1,80 @@
+<!--
+4108042003 鍾昀潔 期中 11/16
+4108042003 Yun-Jie Zhong 期中 11/16
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blackjack</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link href="css/style.css" rel="stylesheet" media="all">
+        <link href="css/keyframes.css" rel="stylesheet" media="all">
+        <link href="css/media.css" rel="stylesheet" media="all">
+        <link rel="shortcut icon" href="chip/blackjack.png">
+        <script src = "js/main.js"></script>
+        <script src = "js/button_action.js"></script>
+        <script src = "js/playing_logic.js"></script>
+        <script src = "js/result_and_table.js"></script>
+    </head>
+    <body>
+        <h1>Blackjack</h1>
+        <div id="cheat">
+            <input type="checkbox" name="" id="Mode-switch">
+            <label for="Mode-switch" id="Mode-switchIabel">cheat</label>
+        </div>
+        <input type="checkbox" name="" id="side-switch">
+        <div class = "side">
+            <h3 id="sidetitle">Winning Percentage</h3>
+            <div id="scoreboard"></div>
+            <h3 id="sidetitle">Histories</h3>
+            <div id="steptable"></div>
+            <label for="side-switch">Step</label>
+        </div>
+        <div id="actions">
+            <button id="deal" class="btn">Deal</button>
+            <button id="hit" class="btn" disabled>Hit</button>
+            <button id="stand" class="btn" disabled>Stand</button>
+            <button id="double" class="btn" disabled>Double</button>
+            <button id="split" class="btn" disabled>Split</button>
+            <button id="surrender" class="btn" disabled>Surrender</button>
+        </div>
+        <section id="gameArea">
+            <div id = "player">
+                <h2>Your Hand</h2>
+                <div id="playerPoint">0</div>
+                <div id = "playerArea">
+                    <img src="cards/back.png" alt="cardImage" class="card" id="firstcard">
+                </div>
+            </div>
+            <div id = "dealer">
+                <h2>Dealer's hand</h2>
+                <div id="dealerPoint">0</div>
+                <div id = "dealerArea">
+                    <img src="cards/red.png" alt="cardImage" class="card" id="firstcard">
+                </div>
+            </div>
+        </section>
+        <div id="result">
+            <div><span>Welcome to Blackjack!</span><br>
+                    Please assign your bet by clicking the icon and click "Deal" to begin.<br>
+                    (You can try to tick the checkbox.)
+            </div>
+        </div>
+        <div id="setBet">
+            <div id="cash">
+                <img src="chip/bet.png" alt="chipImage" class="chip">
+                <input id="wager" value="100" type="number" min="0" step="100" disabled>
+                <img src="chip/cash.png" alt="chipImage" class="chip"><span id="mymoney">1000</span>
+            </div>
+            <img src="chip/50.png" alt="chipImage" class="chip" id="chip50">
+            <img src="chip/100.png" alt="chipImage" class="chip" id="chip100">
+            <img src="chip/200.png" alt="chipImage" class="chip" id="chip200">
+        </div>
+        <div class="tooltip">
+            <button id="exit" class="btn">
+                <span id = "tooltiptext" class="tooltiptext">Chick to exit the game</span>
+                <img src="chip/exit.png" alt="exitImage" id="exitimg">
+            </button>
+        </div>
+    </body>
+</html>

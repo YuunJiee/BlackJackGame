@@ -1,0 +1,170 @@
+@media only screen and (max-width: 1400px){
+    #result div{
+        width: 230px;
+        font-size:medium;
+    }
+    #result p{
+        top: 310px;
+    }
+}
+@media only screen and (max-width: 1200px){
+    #result div{
+        width: 190px;
+        font-size:medium;
+    }
+}
+@media only screen and (max-width: 992px){
+    #result div{
+        width: 190px;
+        font-size:medium;
+    }
+    #result p{
+        top: 300px;
+    }
+}
+@media only screen and (max-width: 800px){
+    #setBet{
+        top:120px;
+        left:150px;
+        padding: 10px;
+        display:flex;
+        flex-direction: row;
+        margin:0px auto;
+    }
+    .chip{
+        height: 50px;
+    }
+    #cash .chip{
+        height: 30px;
+        margin: 10px 5px;
+        
+    }
+    #cash{
+        font-size: 15px;
+    }
+    #wager{
+        font-size: 15px;
+    }
+    #actions{
+        position: absolute;
+        top:200px;
+        /*flex-direction: row;*/
+    }
+    #result div{
+        top:330px;
+        width: 80%;
+        font-size:smaller;
+    }
+    #result span{
+        font-size:25px;
+    }
+    #gameArea{
+        position: absolute; 
+        top:380px;
+    }
+    .card,#backcard{
+        height: 150px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    h1{
+        font-size:3rem;
+    }
+    #setBet{
+        left:90px;
+    }
+    .chip{
+        height: 30px;
+    }
+    #result div{
+        top:330px;
+        width: 86%;
+        line-height: 25px;
+    }
+    .card,#backcard{
+        height: 120px;
+    }
+    #result p{
+        top: 340px;
+        font-size: medium;
+        padding: 10px 10px;
+    }
+    #playerPoint,#dealerPoint{
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    #actions button{
+        margin:10px;
+    }
+    #playerArea1 .card{
+        height: 100px;
+    }
+    #playerArea2 .card{
+        height: 100px;
+    }
+    #playerArea2{
+        left:50%;
+    }
+    #playerArea1{
+        left: -10%;
+    }
+}
+
+@media only screen and (max-width: 460px){
+    h1{
+        font-size:3rem;
+    }
+    h2{
+        font-size:1rem;
+    }
+    .chip{
+        height: 30px;
+    }
+    #result div{
+        top:310px;
+        padding:6px;
+        font-size:small;
+    }
+    #gameArea{
+        top:380px;
+    }
+    #actions button{
+        margin:5px;
+    }
+    #result p{
+        top: 330px;
+    }
+    #result span{
+        font-size:20px;
+    }
+    #player{
+        left:10px;
+    }
+    
+    #dealer{
+        right: 10%;
+    }
+    #setBet{
+        left:5%;
+    }
+    #playerPoint1{
+        left: 18%;
+    }
+    #playerPoint2{
+        left: 80%;
+    }
+    #playerArea1{
+        left: -10%;
+    }
+    #playerArea1 .card{
+        height: 90px;
+    }
+    #playerArea2 .card{
+        height: 90px;
+    }
+    #playerArea2{
+        left:60%;
+    }
+    
+}

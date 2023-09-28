@@ -1,0 +1,466 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100%;
+    background-color: #3e6d59;
+    /*background-color: #728d81;*/
+    overflow-y:auto;
+    overflow-x:hidden;
+    transition:0.4s;
+}
+
+h1{
+    padding: 10px;
+    font-size: 3.5rem;
+    text-align: center;
+    color: #fff;
+}
+h2,p{
+    color: #fff;
+    text-align: center;
+}
+#playerPoint,#dealerPoint{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+#actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#actions button{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    background-color:aliceblue;
+    padding: 10px;
+    margin: 20px 20px;
+    width: 100px;
+    color: #000;
+    font-weight: 700;
+    transition:0.4s;
+    font-size: 1rem;
+    border: none;
+    border-radius: 2px;
+}
+
+#actions button:active{
+    background-color:rgba(0,0,0,0.8);
+    color: #fff;
+}
+
+#actions button:disabled{
+    background-color: #aaa;
+    color: #000;
+}
+
+#money{
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    height: 150px;
+    width: 220px;
+    padding: 10px 15px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    line-height: 50px;
+    font-weight: 600;
+    border-radius: 10px;
+    border:#000 2px solid;
+    font-size: 1.2rem;
+}
+
+#setBet{
+    position: absolute;
+    top:20px;
+    left: 30px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.chip{
+    height: 60px;
+    margin: 10px 10px;
+    filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.3));
+}
+#cash .chip{
+    height: 40px;
+    margin: 10px 5px;
+}
+#mymoney{
+    width: 40px;
+}
+#cash{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+}
+#wager{
+    background-color: rgba(0,0,0,0);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 60px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    border:none;
+}
+#gameArea{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#player{
+    position: absolute;
+    width: 40%;
+    top: 0;
+    left:10%;
+}
+
+#dealer{
+    position: absolute;
+    width: 40%;
+    top: 0;
+    right: 10%;
+}
+#playerPoint,#dealerPoint{
+    text-align: center;
+    font-weight: 700;
+    color:#fff;
+    margin: 20px;
+}
+#playerPoint{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+#playerPoint1{
+    position: absolute;
+    left: 18%;
+}
+#playerPoint2{
+    position: absolute;
+    left: 68%;
+}
+#playerArea,#dealerArea{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#playerArea1{
+    position: absolute;
+    left: 0%;
+    top: 20px;
+}
+#playerArea2{
+    position: absolute;
+    left:50%;
+    top: 20px;
+}
+
+.card,#backcard{
+    position: absolute;
+    margin: 30px 20px;
+    height: 200px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    transition:0.3s;
+    top:0;
+}
+#firstcard{
+    position: absolute;
+    top:0;
+    display: flex;
+    left:auto;
+}
+.card:hover, #backcard:hover{
+    position: absolute;
+    margin: 20px 20px;
+    z-index: 2;
+}
+
+#backcard{
+    transition:0.4s;
+}
+#dealercard1{
+    opacity: 0;
+}
+#playercard0,#dealercard0{
+    position: absolute;
+    left:20%;
+    animation-name: move0;
+    animation-duration:1s;
+}
+#playercard1,#dealercard1{
+    position: absolute;
+    left:26%;
+    animation-name: move1;
+    animation-duration:1s;
+}
+#backcard{
+    left:26%;
+    animation-name: movebackcard;
+    animation-duration:1s;
+}
+#playercard2,#dealercard2{
+    left:32%;
+    animation-name: move2;
+    animation-duration:1s;
+}
+#playercard3,#dealercard3{
+    left:38%;
+    animation-name: move3;
+    animation-duration:1s;
+}
+#playercard4,#dealercard4{
+    left:44%;
+    animation-name: move4;
+    animation-duration:1s;
+}
+/*分牌後*/
+#playerArea1 #playercard1{
+    left:15px;
+    animation-name: move5;
+    animation-duration:1s;
+}
+#playerArea1 #playercard2{
+    left:30px;
+    animation-name: move6;
+    animation-duration:1s;
+}
+#playerArea2 #playercard1{
+    left:15px;
+    animation-name: move5;
+    animation-duration:1s;
+}
+#playerArea2 #playercard2{
+    left:30px;
+    animation-name: move6;
+    animation-duration:1s; 
+}
+#playerArea1 #playercard3{
+    left:45px;
+    animation-name: move7;
+    animation-duration:1s;
+}
+#playerArea2 #playercard3{
+    left:45px;
+    animation-name: move7;
+    animation-duration:1s; 
+}
+/*table*/
+table{
+    text-align: left;
+    width: 90%;
+    margin: 10px 10px;
+    border-collapse: collapse;
+    border-radius: 2px;
+    table-layout:fixed;
+    font-size: smaller;
+}
+tr:hover{
+    background-color: #aaa;
+    border-radius: 2px;
+    font-weight: 600;
+}
+#scoreboard{
+    border: 1.5px solid #000;
+    border-radius: 2px;
+}
+#steptable{
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+#steptable table{
+    border-bottom: #000 solid 1px;
+}
+#steptable::-webkit-scrollbar {
+    width: 15px;
+}
+#steptable::-webkit-scrollbar-track {
+  background-color:#fff;
+}
+#steptable::-webkit-scrollbar-thumb {
+  background-color:#aaa;
+}
+caption{
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 10px;
+}
+/*side*/
+.side{
+    width: 300px;
+    height: 100%;
+    padding: 20px 15px;
+    position: absolute;
+    right: 0px;
+    top:0px;
+    box-sizing: border-box;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    transform: translateX(100%);
+    transition: .3s;
+    z-index: 1;
+}
+.side label{
+    position: absolute;
+    text-align: center;
+    width: 50px;
+    height: 40px;
+    margin: auto;
+    background-color: rgba(0,0,0,0.8);
+    box-shadow: -3px 3px 10px rgba(0,0,0,0.3);
+    color:aliceblue;
+    left: -50px;
+    top: 20px;
+    line-height: 40px;
+    font-size: 16px;
+    border-radius: 2px 0 0 2px;
+    transition: 0.3s;
+}
+
+.side label:hover{
+    left: -56px;
+    width: 56px;
+}
+
+#side-switch{
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+#side-switch:checked + .side{
+    transform: translate(0);
+}
+/*result*/
+#result p{
+    background-color:rgba(0,0,0,0.9);
+    padding: 20px 20px;
+    font-size: 150%;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    color: #fff;
+    font-size: large;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;  
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: 2px;
+    animation-name: resultam;
+    animation-duration:1s;
+}
+#result div{
+    padding: 15px 15px;
+    font-size: 150%;
+    color: #000;
+    font-size: large;
+    font-weight: 700;
+    position: absolute;
+    top: 45%;  
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 30px;
+    width: 350px;
+    overflow: visible;
+    background-color:aliceblue;
+    border-radius: 2px;
+}
+#result span{
+    font-size:30px;
+}
+/*gameover*/
+#gameover{
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    background-color:aliceblue;
+    padding: 20px 20px;
+    font-size: 150%;
+    color: #000;
+    font-size: large;
+    font-weight: 700;
+    position: absolute;
+    top: 65%;  
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+    animation-name: resultam;
+    animation-duration:3s;
+    border:none;
+}
+
+#gameover:hover{
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    background-color: #000;
+    padding: 20px 20px;
+    font-size: 150%;
+    color: #fff;
+    font-size: large;
+    font-weight: 700;
+    position: absolute;
+    top: 65%;  
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#cheat{
+    position:absolute;
+    bottom:5px;
+    left:5px;
+}
+
+.cardcannotuse{
+    filter: brightness(60%);
+}
+
+#sidetitle{
+    text-align: center;
+    padding: 10px 10px;
+    margin: 10px, 0;
+    background-color: #000;
+    color: #fff;
+    border-radius: 2px;
+}
+#exitimg{
+    height:25px;
+}
+
+#exit{
+    position:absolute;
+    bottom:5px;
+    right:5px;
+    background-color:rgba(0,0,0,0);
+    border:none;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 5px 5px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    /* 定位 */
+    position: absolute;
+    right:40px;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
